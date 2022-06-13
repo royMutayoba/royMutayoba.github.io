@@ -1,44 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <style>
-        body{
-            display: flex;
-            align-items: center;
-        }
-        .container{
-            min-width: 60%;
-            height: 500px;
-            border-radius: 20px;
-            box-sizing: border-box;
-        }
-        .form{
+        body {
             text-align: center;
         }
-        input[type="text"]{
+
+        .container {
+            margin: auto;
+            width: 60%;
+            height: 540px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.507);
+            margin-top: -50px;
+        }
+
+        .form {
+            text-align: center;
+        }
+
+        input[type="text"] {
             height: 30px;
-            width: 200px;
+            width: 250px;
             border-radius: 5px;
             margin-bottom: 10px;
+            border: 1px solid black;
+            background-color: transparent;
+        }
+
+        input[type=submit] {
+            height: 40px;
+            width: 150px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-color: transparent;
+            background-color: rgb(19, 102, 19);
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: transparent;
+            color: rgb(19, 102, 19);
+            border-style: solid;
+            border-color: rgb(19, 102, 19);
+        }
+
+        .test {
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .bg {
+            background-image: url(roy.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            padding: 0;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+
+
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover:after {
+            width: 100%;
+        }
+        #shop{
+            color:#009688;
         }
     </style>
 </head>
+
 <body>
-    <center class="container">
-        <h3 class="test">Help us bring your Calculator to you by filling out this form</h3>
-        <form class="form">
-            <div><input type="text" Name="name" size="30" maxlength="15" placeholder="Name"></div>
-            <div><input type="text" Name="email" size="30" maxlength="15" placeholder="email"></div>
-            <div><input type="text" Name="address" size="30" maxlength="15" placeholder="address"></div>
-            <input type="checkbox" name="caluu1" value="ms1">MS OLD MODEL
-            <input type="checkbox" name="caluu2" value="ms2">MS NEW MODEL
-            <input type="checkbox" name="caluu3" value="esplus">ES PLUS
-            <input type="submit">
-        </form>
-    </center>
+    <div class="bg"></div>
+    <div class="navbar" id="shop-nav">
+        <h2>Shop</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="muta.html" id="shop">shop</a></li>
+            <li><a href="bonyo.html">Our services</a></li>
+            <li><a href="about us.html">About Us</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <center>
+            <h3 class="test">Fill Credentials</h3>
+            <form class="form">
+                <div><input type="text" Name="name" size="30" maxlength="15" placeholder="Name"></div>
+                <div><input type="text" Name="email" size="30" maxlength="15" placeholder="email"></div>
+                <div><input type="text" Name="address" size="30" maxlength="15" placeholder="address"></div>
+                <div class="calc-choices">
+                    <div>
+                        <input type="checkbox" name="caluu1" value="ms1">MS OLD MODEL
+                        <input type="checkbox" name="caluu2" value="ms2">MS NEW MODEL
+                        <input type="checkbox" name="caluu3" value="esplus">ES PLUS
+                    </div>
+                    <div class="calculators">
+                        <img src="./caluu/rona.jpeg" alt="loading..." height="250px" width="200px">
+                        <img src="./caluu/calc1.jpeg" alt="loading..." height="250px" width="200px">
+                    </div>
+                </div>
+                <div><input type="submit" class="btn-submit"></div>
+            </form>
+        </center>
+    </div>
+
 </body>
+
 </html>

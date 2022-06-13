@@ -1,12 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
+    <style>
+        .maneno {
+            width: 250px;
+            margin-bottom: 20px;
+
+        }
+
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+        .holder {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: -100px;
+        }
+
+        .col2 {
+            animation: appear;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+        }
+
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .bg {
+            background-image: url(roy.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        .icon {
+            height: 25px;
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .icons-container {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .super-icon-container {
+            margin-top: 10px;
+        }
+
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            padding: 0;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+
+
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover:after {
+            width: 100%;
+        }
+        #about{
+            color: #009688;
+        }
+    </style>
 </head>
+
 <body>
-    <i class="fa-brands fa-whatsapp"></i>
+    <div class="bg"></div>
+    <div class="navbar" id="about-nav">
+        <h2>Shop</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="muta.html">shop</a></li>
+            <li><a href="bonyo.html">Our services</a></li>
+            <li><a href="about us.html" id="about">About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="holder">
+        <div class="col1">
+            <img src="./caluu/abt.png" alt="loading ..." srcset="">
+        </div>
+        <div class="col2">
+            <h3>About Us</h3>
+            <div class="maneno">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A nostrum vero officiis quasi non nulla libero rem
+                perspiciatis voluptatum fuga, pariatur exercitationem quas deleniti illum obcaecati eaque tempora nam! Id.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A nostrum vero officiis quasi non nulla libero rem
+                perspiciatis voluptatum fuga, pariatur exercitationem quas deleniti illum obcaecati eaque tempora nam! Id.
+            </div>
+            <div class="super-icon-container">
+                <div class="icons-container">
+                    <span><img src="./icons/location-pin-solid.svg" class="icon"></span>
+                    <span>Dar es Salaam</span>
+                </div>
+                <div class="icons-container">
+                    <span><img src="./icons/phone-solid.svg" class="icon"></span>
+                    <span>+255-765-673-987</span>
+                </div>
+                <div class="icons-container">
+                    <span><img src="./icons/envelope-solid.svg" class="icon"></span>
+                    <span>royalstores@gmail.com</span>
+                </div>
+                <div class="icons-container">
+                    <span><img src="./icons/instagram-brands.svg" class="icon"></span>
+                    <span>Instagram Page</span>
+                </div>
+            </div>
+    </div>
+    
+    </div>
+
 </body>
+
 </html>
