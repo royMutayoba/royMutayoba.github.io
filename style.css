@@ -62,7 +62,7 @@ transition:0.5s ;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    color:black;
+    color:white;
 }
 .content h1 {
     font-size: 70px;
